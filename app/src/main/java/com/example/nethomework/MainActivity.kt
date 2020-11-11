@@ -23,9 +23,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var outputDirectory: File
     private lateinit var cameraExecutor: ExecutorService
 
+    private val network = Network()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //val res = network.imgurApi.uploadPhoto().status
 
         if (allPermissionsGranted()) {
             startCamera()
