@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentTakePhoto">
+
+    <fragment
+        android:id="@+id/fragmentTakePhoto"
+        android:name="com.example.nethomework.fragments.FragmentTakePhoto"
+        android:label="fmt_take_photo"
+        tools:layout="@layout/fmt_take_photo" >
+        <action
+            android:id="@+id/action_fragmentTakePhoto_to_fragmentUploadImage"
+            app:destination="@id/fragmentUploadImage"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/fragmentUploadImage"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUploadImage"
+        android:name="com.example.nethomework.fragments.FragmentUploadImage"
+        android:label="fmt_upload_image"
+        tools:layout="@layout/fmt_upload_image" >
+        <argument
+            android:name="imageFile"
+            app:argType="android.net.Uri"/>
+    </fragment>
+</navigation>

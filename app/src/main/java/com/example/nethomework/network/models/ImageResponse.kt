@@ -1,4 +1,4 @@
-package com.example.nethomework
+package com.example.nethomework.network.models
 
 data class ImageResponse(
     val success: Boolean = false,
